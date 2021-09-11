@@ -1,0 +1,173 @@
+
+
+.homepage {
+  position: relative;
+  top: 100px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#content{
+  margin-top: 70px;
+  width: 40%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+#credentials {
+  padding: 10px;
+  border: 5px solid #101111;
+  margin-top: 10px;
+  width: 180px;
+}
+
+.homepage h1, .homepage h3 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.homepage h1{
+  font-size: 90px;
+}
+
+.homepage h3{
+  font-size: 40px;
+}
+
+#content h5{
+  margin: 0;
+}
+
+.homepage-appbar{
+  display: flex;
+  width: 100%;
+  margin:10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header{
+  margin:0;
+  border-bottom: 2px solid #080808;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1px;
+}
+
+.homepage-appbar h1{
+  margin: 5px 0 0 10px;
+  color: #0c0c0c;
+}
+
+.homepage-appbar ul li{
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+.homepage-appbar a:hover{
+  text-decoration: underline; 
+  text-decoration-color: #0c0c0c;
+}
+
+.homepage-appbar a {
+  text-decoration: none;
+  color:#0a0a0a;
+  font-weight: bold;
+}
+
+.homepage-appbar ul{
+  display: flex;
+}
+
+
+
+.loginPage {
+
+  height: 500px;
+  animation: loginBackground 1 5s linear forwards;
+}
+
+@keyframes loginBackground{
+  from{
+    /* background-image: url(./images/homeImg.png); */
+    background-size:100% 500px;
+    background-repeat: no-repeat;
+  }
+  to{
+    /* background-image: url(./images/homeImg.png); */
+    background-size:100% 500px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* CSS part for error notification */
+.errorMessage {
+  display:flex;
+  width: 30%;
+  position: absolute;
+  top: 10px;
+  right: 35%;
+  justify-content: space-around;
+  flex-direction: row;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: red;
+  color:white;
+  font-weight: bolder;
+  animation: notification 1 0.1s linear forwards;
+}
+.errorMessage button{
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color:white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.errorMessage button:hover {
+  opacity: 0.8;
+}
+
+@keyframes notification{
+  from{
+
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+@media only screen and (max-width: 1200px), (max-width: 600px) {
+  #content{
+    margin-top: 70px;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+  }  
+
+  .homepage {
+    position: relative;
+    top: 100px;
+    height: 500px;
+    animation: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #credentials{
+    margin-top: 10px;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+  }
+}
